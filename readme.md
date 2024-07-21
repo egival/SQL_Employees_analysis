@@ -9,7 +9,7 @@ My project focuses on the Employees database to expand analysis provided in the 
 * Hiring: Number of employees hired on specific dates and number of senior-level employees hired after 1993.
 * Departments: Number of employees per department and average salary per department.
 
-The SQL queries are contained in a file named sql_employee_analysis.sql.
+The SQL queries are contained in a file named "Employees_queries.sql".
 
 **Technologies:**
 
