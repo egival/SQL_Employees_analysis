@@ -1,1 +1,0 @@
-SELECT emp_no AS "Employee ID" FROM "Employees";
