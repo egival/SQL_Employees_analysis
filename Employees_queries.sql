@@ -30,8 +30,7 @@
 -- * List of all employees working longer than 30 years:
     SELECT distinct emp_no, first_name, last_name, hire_date
     FROM employees
-    WHERE EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM hire_date) > 30
-    LIMIT 7;
+    WHERE EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM hire_date) > 30;
     --Output: few examples below
     --emp_no |   first_name   |    last_name     | hire_date
     ---------+----------------+------------------+------------
@@ -59,8 +58,7 @@
 -- * How many people were hired on each hiring date?
     SELECT hire_date, count(emp_no) as "Amount" employees
     Group BY hire_date
-    ORDER BY "Amount" DESC
-    LIMIT 5;
+    ORDER BY "Amount" DESC;
     --Output: 5 biggest values:
     --  hire_date  | Amount
     -- ------------+--------
@@ -70,7 +68,7 @@
     -- 1985-03-24 |    128
     -- 1985-05-24 |    127
  
--- * Count all employees who were hired after 1993 and have "Senior" level in their title
+-- * How many employees are hired after 1993 and have "Senior" level in their title?
     SELECT COUNT(e.emp_no)
     FROM employees as e
     JOIN titles as t USING (emp_no)
