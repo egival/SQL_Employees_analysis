@@ -97,7 +97,7 @@
     -- Research           |           21126
     -- Sales              |           52245
 
--- * What is the total average salary per department?
+-- * What is the average salary per department?
     SELECT d.dept_name as "Department name", ROUND(AVG(s.salary), 2) as "Average Salary" 
     FROM departments as d
     JOIN dept_emp as de USING (dept_no)
@@ -117,7 +117,8 @@
     -- Quality Management |       57251.27
     -- Human Resources    |       55574.88
 
--- * Show me all the employees that work in the Sales department from date till now.(Assuming that placeholder 9999-01-01 means employees are still working)
+-- * List all the employees in the Sales department who have been working from date to the present.
+-- (Assuming that placeholder 9999-01-01 means employees are still working)
     SELECT de.emp_no, d.dept_name, de.from_date, de.to_date
     FROM dept_emp as de
     JOIN departments as d USING (dept_no)
